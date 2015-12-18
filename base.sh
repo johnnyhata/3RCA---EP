@@ -2,8 +2,9 @@
 # Informações do Script ........................................................
 # Programa    : <nome do script>
 # Autor       : <nome de quem escreveu o script>
-# Descrição   : <descreva qual o objetivo do script, o que ele faz, qual o
-#               problema que ele resolve, etc.>
+# Descrição   : <descreva com suas palavras qual o objetivo do script usando
+#               como referencia os itens "Description" e "Rationale" do
+#               documento do CIS>
 # Dependências: <quais pacotes são necessários para executar esse script>
 # Comando     : <comando da CLI para executar o script>
 # Observação  : <Opcional - escreva se tiver alguma observação a fazer>
