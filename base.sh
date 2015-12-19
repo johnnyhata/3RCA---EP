@@ -20,14 +20,17 @@
 #    - Não precisa dizer o tipo da variável;
 #    - Ao utilizar a variável, coloque aspas duplas " no início e fim;
 #    - Nomes de variáveis são case sensitive;
-#    - Coloque aspas duplas " ao declarar um texto dentro da variável;
-#
+#    - Não coloque espaços entre o sinal de igualdade;
+#    - 
 # 2. Declare todas as variáveis que for utilizar no início do script;
 # 3. Variáveis globais devem estar em maiúsculas e as locais em minúsculas;
-#
+# 4. Coloque aspas duplas " ao declarar um texto dentro da variável;
 # 
-# SCORED: 
-# LEVEL:
+# ?. Variáveis de controle obrigatórias:
+#    - SCORED: coloque o número 1 (um) se no cabeçalho do item a ser testado /
+#      auditado estiver escrito (Scored);
+#    - LEVEL: coloque o número 1 (um) ou 2 (dois) de acordo com o item a ser
+#      testado / auditado;
 #...............................................................................
 SCORED=
 LEVEL=
