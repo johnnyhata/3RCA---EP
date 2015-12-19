@@ -1,5 +1,6 @@
 #!/bin/bash
 # Informações do Script ........................................................
+#
 # Programa    : <nome do script>
 # Autor       : <nome de quem escreveu o script>
 # Descrição   : <descreva com suas palavras qual o objetivo do script usando
@@ -10,27 +11,33 @@
 # Observação  : <Opcional - escreva se tiver alguma observação a fazer>
 # Logs        : <alterações que foram feitas nesse código, colocando data e
 #               descrição do que foi feito incluindo a linha>
+#
 #...............................................................................
 
 # Declaração de bibliotecas e variáveis ........................................
 #
 # 1. Sobre variáveis no bash do Linux:
-#    - Não inicie as variáveis com números;
-#    - Não utilize caracteres especiais (arroba, hashtag, etc.) nos nomes;
-#    - Não precisa dizer o tipo da variável;
+#    - Não inicie os nomes das variáveis com números;
+#    - Não utilize caracteres especiais (arroba, hashtag, espaços, etc.) nos
+#      nomes das variáveis;
+#    - Não há necessidade de declarar o tipo da variável;
+#    - Não coloque espaços entre o sinal de igualdade;
+#    - Não utilize nomes de variáveis de ambiente para declarar suas variáveis;
 #    - Ao utilizar a variável, coloque aspas duplas " no início e fim;
 #    - Nomes de variáveis são case sensitive;
-#    - Não coloque espaços entre o sinal de igualdade;
 #    - 
 # 2. Declare todas as variáveis que for utilizar no início do script;
-# 3. Variáveis globais devem estar em maiúsculas e as locais em minúsculas;
-# 4. Coloque aspas duplas " ao declarar um texto dentro da variável;
-# 
+# 3. Declare variáveis globais em maiúsculas e as locais em minúsculas;
+# 4. Coloque aspas duplas " ao colocar um valor do tipo texto;
 # ?. Variáveis de controle obrigatórias:
 #    - SCORED: coloque o número 1 (um) se no título do item a ser auditado
 #      (testado) estiver escrito (Scored);
 #    - LEVEL : coloque o número 1 (um) ou 2 (dois) verificando o "Level" em
 #      "Profile Applicability";
+#
+# ?. Leia as referências:
+#
+#
 #...............................................................................
 SCORED=
 LEVEL=
