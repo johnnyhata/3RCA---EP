@@ -14,21 +14,37 @@
 
 # Declaração de bibliotecas e variáveis ........................................
 #
+# 1. Sobre variáveis no bash do Linux:
+#    - Não inicie as variáveis com números;
+#    - Não utilize caracteres especiais (arroba, hashtag, etc.) nos nomes;
+#    - Não precisa dizer o tipo da variável;
+#    - Ao utilizar a variável, coloque aspas duplas " no início e fim;
+#    - Nomes de variáveis são case sensitive;
+#    - Coloque aspas duplas " ao declarar um texto dentro da variável;
+#
+# 2. Declare todas as variáveis que for utilizar no início do script;
+# 3. Variáveis globais devem estar em maiúsculas e as locais em minúsculas;
+#
+# 
+# SCORED: 
+# LEVEL:
 #...............................................................................
+SCORED=
+LEVEL=
 
 
-# Testes e auditoria ...........................................................
+# Testes e auditoria (Audit) ...................................................
 # Log se deu certo
 #...............................................................................
 
 
-# Verificação do resultado do teste e ações corretivas .........................
+# Verificação do teste e ações corretivas (Remediation) ........................
 # Log se deu certo
 #...............................................................................
 
 
 
-# Testes e auditoria após ações corretivas .....................................
+# Testes e auditoria após ações corretivas (Audit) .............................
 # Log se deu certo ou não
 #...............................................................................
 
