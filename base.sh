@@ -12,6 +12,12 @@
 # Logs        : <alterações que foram feitas nesse código, colocando data e
 #               descrição do que foi feito incluindo a linha>
 #
+# ?. Leia as referências:
+#    - Shellscript Profissional: Paginas 28-34, 475-477;
+#
+# ?. Recomendações:
+#    - Faça o backup do script antes de altera-los;
+#
 #...............................................................................
 
 # Declaração de bibliotecas e variáveis ........................................
@@ -36,7 +42,7 @@
 #      "Profile Applicability";
 #
 # ?. Leia as referências:
-#
+#    - Shellscript Profissional: Paginas 41-42, 328-333;
 #
 #...............................................................................
 GUI="$1"
@@ -65,14 +71,6 @@ LEVEL=
 
 Framework do código:
 --------------------------
-- Colocar exemplos de boas práticas do capitulo 13; 
-   - fazer copia de arquivos de configuração antes de altera-los colocando com extensão data e hora;
-   - fazer copia do script antes de altera-los colocando com extensão data e hora;
-- Informações e comentários do código (cap 2-28-34, MF-475-477);
-- Declaração de bibliotecas e variáveis utilizadas (cap 13-328-333, cap 2-41-42);
-   SCORE=1 (SIM) log?
-   LEVEL=1 ou 2 log?
-   GUI=1 (SIM)
 - Print do teste que será feito e execução do teste (cap 2-34-41, ape D-426-474, cap 5-101-105);
 - Decisão do que fazer baseado no resultado do teste;
 - Print do resultado negativo do teste;
