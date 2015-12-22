@@ -54,22 +54,49 @@ LEVEL=
 
 # Testes e auditoria (Audit) ...................................................
 #
-# 1. Execute um comando por vez;
+# 1. Execute e verifique um comando por vez;
 # 2. Entenda o que o comando especificado em "Audit" faz usando o comando de
-#    DEBUG do bash, executando o comando no terminal, quebrando os comandos em
+#    DEBUG do bash, executando o comando no terminal, quebrando os comandos
 #    em partes, lendo as referências recomendadas;
-# 3. Faça o comentário do código do que entendeu usando suas palavras;
+# 3. Faça o comentário do código dizendo o que entendeu usando suas palavras;
+#
+# 4. Leia as referências:
+#    - ;
 #
 #...............................................................................
 
 
 # Verificação do teste e ações corretivas (Remediation) ........................
-# Log se deu certo
+#
+# 1. Verifique a saída esperada do comando executado (Audit);
+# 2. Execute a ação corretiva (Remediation) um comando por vez;
+# 3. Entenda o que o comando especificado em "Remediation" faz usando o comando
+#    de DEBUG do bash, executando o comando no terminal, quebrando os comandos
+#    em partes, lendo as referências recomendadas;
+# 4. Faça o comentário do código dizendo o que entendeu usando suas palavras;
+# 5. Verifique a saída esperada do comando executado (Remediation);
+# 6. Adicione no log no formato abaixo:
+# [ddmmaa(6 caracteres)][Descrição(59 caracteres)][Erro/Concluído(9 caracteres)]
+#
+# ?. Leia as referências:
+#    - ;
+#
 #...............................................................................
 
 
 
 # Testes e auditoria após ações corretivas (Audit) .............................
+#
+# 1. Execute e verifique um comando por vez;
+# 2. Entenda o que o comando especificado em "Audit" faz usando o comando de
+#    DEBUG do bash, executando o comando no terminal, quebrando os comandos em
+#    em partes, lendo as referências recomendadas;
+# 3. Faça o comentário do código do que entendeu usando suas palavras;
+# 2. Adicione o significado do resultado de forma formatada para o log;
+#
+# ?. Leia as referências:
+#    - ;
+#
 # Log se deu certo ou não
 #...............................................................................
 
