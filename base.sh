@@ -24,7 +24,7 @@
 #
 # 1. Sobre variáveis no bash do Linux:
 #    - Não inicie os nomes das variáveis com números;
-#    - Não utilize caracteres especiais (arroba, hashtag, espaços, etc.) nos
+#    - Não utilize caracteres especiais (arroba, cerquilha, espaços, etc.) nos
 #      nomes das variáveis;
 #    - Não há necessidade de declarar o tipo da variável;
 #    - Não coloque espaços entre o sinal de igualdade;
@@ -35,13 +35,15 @@
 # 2. Declare todas as variáveis que for utilizar no início do script;
 # 3. Declare variáveis globais em maiúsculas e as locais em minúsculas;
 # 4. Coloque aspas duplas " ao colocar um valor do tipo texto;
-# ?. Variáveis de controle obrigatórias:
+# 5. Variáveis de controle obrigatórias:
+#    - GUI: se o primeiro parâmetro estiver vazio, o script será executado sem
+#      a GUI;
 #    - SCORED: coloque o número 1 (um) se no título do item a ser auditado
 #      (testado) estiver escrito (Scored);
 #    - LEVEL : coloque o número 1 (um) ou 2 (dois) verificando o "Level" em
 #      "Profile Applicability";
 #
-# ?. Leia as referências:
+# 6. Leia as referências:
 #    - Shellscript Profissional: Paginas 41-42, 328-333;
 #
 #...............................................................................
@@ -51,6 +53,8 @@ LEVEL=
 
 
 # Testes e auditoria (Audit) ...................................................
+#
+#
 # Log se deu certo
 #...............................................................................
 
