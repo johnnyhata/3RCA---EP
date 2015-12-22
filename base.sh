@@ -22,6 +22,7 @@
 
 # Fluxograma do script .........................................................
 #
+# declarar variáveis e bibliotecas
 # Início
 #    Executar teste de auditoria
 #    Se resultado do teste for erro de comando
