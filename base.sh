@@ -12,11 +12,33 @@
 # Logs        : <alterações que foram feitas nesse código, colocando data e
 #               descrição do que foi feito incluindo a linha>
 #
-# ?. Leia as referências:
+# 1. Leia as referências:
 #    - Shellscript Profissional: Paginas 28-34, 475-477;
 #
-# ?. Recomendações:
+# 2. Recomendações:
 #    - Faça o backup do script antes de altera-los;
+#
+# 3. Fluxo do script:
+#
+#
+Início
+   Executar teste de auditoria
+   Se resultado do teste for erro de comando
+      criar log de erro do comando
+   Se resultado do teste for que o teste foi sucedido
+      Criar log de teste foi sucedido
+   Se resultado do teste for teste acusou falha de segurança
+      Criar log de teste acusou falha de segurança
+      Executar comando que conserta a falha de segurança
+      Se resultado do comando que conserta a falha de segurança for erro de comando
+         criar log de erro do comando
+      Se resultado do comando que conserta a falha de segurança for bem sucedido
+         Criar log de que a falha foi consertada
+      Se resultado do comando que conserta a falha de segurança fachou
+         Criar log de que ocorreu alguma falha
+Fim
+
+#
 #
 #...............................................................................
 
