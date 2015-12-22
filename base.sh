@@ -22,6 +22,7 @@
 
 # Declaração de bibliotecas e variáveis ........................................
 #
+# 0. Leia e entenda todas instruções antes de fazer;
 # 1. Sobre variáveis no bash do Linux:
 #    - Não inicie os nomes das variáveis com números;
 #    - Não utilize caracteres especiais (arroba, cerquilha, espaços, etc.) nos
@@ -54,15 +55,16 @@ LEVEL=
 
 # Testes e auditoria (Audit) ...................................................
 #
-# 1. Execute e verifique um comando por vez;
-# 2. Entenda o que o comando especificado em "Audit" faz usando o comando de
+# 0. Leia e entenda todas instruções antes de fazer;
+# 1. Entenda o que o comando especificado em "Audit" faz usando o comando de
 #    DEBUG do bash, executando o comando no terminal, quebrando os comandos
 #    em partes, lendo as referências recomendadas;
-# 3. Faça o comentário do código dizendo o que entendeu usando suas palavras;
+# 2. Faça o comentário do código dizendo o que entendeu usando suas palavras;
+# 3. Execute e verifique um comando por vez;
 # 4. Adicione no log o resultado de "Audit" no formato abaixo:
-# [ddmmaa(6 caracteres)][Descrição(59 caracteres)][Verificar/Testado(9 carac.)]
+#    [ddmmaa(6 caracteres)][Descrição(59 car.)][Verificar/Testado(9 car.)]
 #
-# 4. Leia as referências:
+# 5. Leia as referências:
 #    - ;
 #
 #...............................................................................
@@ -70,17 +72,18 @@ LEVEL=
 
 # Verificação do teste e ações corretivas (Remediation) ........................
 #
+# 0. Leia e entenda todas instruções antes de fazer;
 # 1. Verifique a saída esperada do comando executado (Audit);
-# 2. Execute a ação corretiva (Remediation) um comando por vez;
-# 3. Entenda o que o comando especificado em "Remediation" faz usando o comando
+# 2. Entenda o que o comando especificado em "Remediation" faz usando o comando
 #    de DEBUG do bash, executando o comando no terminal, quebrando os comandos
 #    em partes, lendo as referências recomendadas;
-# 4. Faça o comentário do código dizendo o que entendeu usando suas palavras;
+# 3. Faça o comentário do código dizendo o que entendeu usando suas palavras;
+# 4. Execute a ação corretiva (Remediation) um comando por vez;
 # 5. Verifique a saída esperada do comando executado (Remediation);
 # 6. Adicione no log o resultado de "Remediation" no formato abaixo:
-# [ddmmaa(6 caracteres)][Descrição(59 caracteres)][Erro/Concluído(9 caracteres)]
+#    [ddmmaa(6 caracteres)][Descrição(59 car.)][Erro/Concluído(9 car.)]
 #
-# ?. Leia as referências:
+# 7. Leia as referências:
 #    - ;
 #
 #...............................................................................
