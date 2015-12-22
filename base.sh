@@ -48,6 +48,7 @@
 #    - Shellscript Profissional: Paginas 41-42, 328-333;
 #
 #...............................................................................
+. auditlib.sh   # Biblioteca de funções
 GUI="$1"
 SCORED=
 LEVEL=
