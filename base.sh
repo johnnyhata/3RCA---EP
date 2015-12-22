@@ -33,10 +33,13 @@ Início
       Executar comando que conserta a falha de segurança
       Se resultado do comando que conserta a falha de segurança for erro de comando
          criar log de erro do comando
+         Sair do script
+      Se resultado do comando que conserta a falha de segurança falhou
+         Criar log de que ocorreu alguma falha
+         Sair do script
       Se resultado do comando que conserta a falha de segurança for bem sucedido
          Criar log de que a falha foi consertada
-      Se resultado do comando que conserta a falha de segurança fachou
-         Criar log de que ocorreu alguma falha
+
 Fim
 
 #
