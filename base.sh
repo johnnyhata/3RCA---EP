@@ -40,7 +40,11 @@
 #          Criar log de que ocorreu alguma falha
 #          Sair do script
 #       Se concerto for bem sucedido
-#          Criar log de que a falha foi consertada
+#          Executar teste de auditoria novamente (Não iniciar desde o começo para não entrar em loop infinito)
+#          Se teste for bem sucedido
+#             Criar log de que a falha foi consertada
+#          Se teste for falha de segurança
+#             Criar log de teste acusou falha de segurança
 #    Executar o próximo teste
 # Fim
 #
