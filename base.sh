@@ -25,6 +25,7 @@ Início
    Executar teste de auditoria
    Se resultado do teste for erro de comando
       criar log de erro do comando
+      Sair do script
    Se resultado do teste for que o teste foi sucedido
       Criar log de teste foi sucedido
    Se resultado do teste for teste acusou falha de segurança
