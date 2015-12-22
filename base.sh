@@ -59,6 +59,8 @@ LEVEL=
 #    DEBUG do bash, executando o comando no terminal, quebrando os comandos
 #    em partes, lendo as referências recomendadas;
 # 3. Faça o comentário do código dizendo o que entendeu usando suas palavras;
+# 4. Adicione no log o resultado de "Audit" no formato abaixo:
+# [ddmmaa(6 caracteres)][Descrição(59 caracteres)][Erro/Concluído(9 caracteres)]
 #
 # 4. Leia as referências:
 #    - ;
@@ -75,7 +77,7 @@ LEVEL=
 #    em partes, lendo as referências recomendadas;
 # 4. Faça o comentário do código dizendo o que entendeu usando suas palavras;
 # 5. Verifique a saída esperada do comando executado (Remediation);
-# 6. Adicione no log no formato abaixo:
+# 6. Adicione no log o resultado de "Remediation" no formato abaixo:
 # [ddmmaa(6 caracteres)][Descrição(59 caracteres)][Erro/Concluído(9 caracteres)]
 #
 # ?. Leia as referências:
