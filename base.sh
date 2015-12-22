@@ -18,31 +18,30 @@
 # 2. Recomendações:
 #    - Faça o backup do script antes de altera-los;
 #
-# 3. Fluxo do script:
-#
-#
-Início
-   Executar teste de auditoria
-   Se resultado do teste for erro de comando
-      criar log de erro do comando
-      Sair do script
-   Se resultado do teste for que o teste foi sucedido
-      Criar log de teste foi sucedido
-   Se resultado do teste for teste acusou falha de segurança
-      Criar log de teste acusou falha de segurança
-      Executar comando que conserta a falha de segurança
-      Se resultado do comando que conserta a falha de segurança for erro de comando
-         criar log de erro do comando
-         Sair do script
-      Se resultado do comando que conserta a falha de segurança falhou
-         Criar log de que ocorreu alguma falha
-         Sair do script
-      Se resultado do comando que conserta a falha de segurança for bem sucedido
-         Criar log de que a falha foi consertada
-   Executar o próximo teste
-Fim
+#...............................................................................
 
+# Fluxograma do script .........................................................
 #
+# Início
+#    Executar teste de auditoria
+#    Se resultado do teste for erro de comando
+#       criar log de erro do comando
+#       Sair do script
+#    Se resultado do teste for que o teste foi sucedido
+#       Criar log de teste foi sucedido
+#    Se resultado do teste for teste acusou falha de segurança
+#       Criar log de teste acusou falha de segurança
+#       Executar comando que conserta a falha de segurança
+#       Se resultado do comando que conserta a falha de segurança for erro de comando
+#          criar log de erro do comando
+#          Sair do script
+#       Se resultado do comando que conserta a falha de segurança falhou
+#          Criar log de que ocorreu alguma falha
+#          Sair do script
+#       Se resultado do comando que conserta a falha de segurança for bem sucedido
+#          Criar log de que a falha foi consertada
+#    Executar o próximo teste
+# Fim
 #
 #...............................................................................
 
