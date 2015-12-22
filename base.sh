@@ -60,7 +60,7 @@ LEVEL=
 #    em partes, lendo as referências recomendadas;
 # 3. Faça o comentário do código dizendo o que entendeu usando suas palavras;
 # 4. Adicione no log o resultado de "Audit" no formato abaixo:
-# [ddmmaa(6 caracteres)][Descrição(59 caracteres)][Erro/Concluído(9 caracteres)]
+# [ddmmaa(6 caracteres)][Descrição(59 caracteres)][Verificar/Testado(9 carac.)]
 #
 # 4. Leia as referências:
 #    - ;
