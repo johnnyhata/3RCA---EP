@@ -39,7 +39,7 @@ Início
          Sair do script
       Se resultado do comando que conserta a falha de segurança for bem sucedido
          Criar log de que a falha foi consertada
-
+   Executar o próximo teste
 Fim
 
 #
@@ -89,7 +89,7 @@ LEVEL=
 # 2. Faça o comentário do código dizendo o que entendeu usando suas palavras;
 # 3. Execute e verifique um comando por vez;
 # 4. Adicione no log o resultado de "Audit" no formato abaixo:
-#    [ddmmaa(6 caracteres)][Descrição(59 car.)][Verificar/Testado(9 car.)]
+# [ddmmaa(6 caracteres)][script+Descrição(59 car.)][Verificar/Testado(9 car.)]
 #
 # 5. Leia as referências:
 #    - ;
@@ -108,7 +108,7 @@ LEVEL=
 # 4. Execute a ação corretiva (Remediation) um comando por vez;
 # 5. Verifique a saída esperada do comando executado (Remediation);
 # 6. Adicione no log o resultado de "Remediation" no formato abaixo:
-#    [ddmmaa(6 caracteres)][Descrição(59 car.)][Erro/Concluído(9 car.)]
+# [ddmmaa(6 caracteres)][script+Descrição(59 car.)][Erro/Concluído(9 car.)]
 #
 # 7. Leia as referências:
 #    - ;
