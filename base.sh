@@ -54,8 +54,12 @@ LEVEL=
 
 # Testes e auditoria (Audit) ...................................................
 #
+# 1. Execute um comando por vez;
+# 2. Entenda o que o comando especificado em "Audit" faz usando o comando de
+#    DEBUG do bash, executando o comando no terminal, quebrando os comandos em
+#    em partes, lendo as referências recomendadas;
+# 3. Faça o comentário do código do que entendeu usando suas palavras;
 #
-# Log se deu certo
 #...............................................................................
 
 
