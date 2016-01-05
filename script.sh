@@ -1,51 +1,60 @@
 #!/bin/bash
-declare -i nResTestes=0
-declare -i nResCorrecoes=0
-declare -i nTesAtual=1
+#
+# Arquivo: script.sh
+# Autor  : Johnny Hata
+# Descri.: Script base arquitetado para fazer integracoes (bibliotecas, UX,
+#          outros script, etc.) de todos os codigos do projeto.
+#          Sera necessario alterar as linhas de testes e correcoes indicadas
+#          no codigo abaixo, de acordo com o entendimento do documento CIS.
+# Logs   : 040115: Primeira versao do codigo.
+#
+
+# Declaracao de bibliotecas e variaveis
+. lib.sh                     # Carrega a biblioteca de funcoes
+declare -i nResTestes=0      # Contador de erros dos testes
+declare -i nResCorrecoes=0   # Contador de erros das correcoes
+declare -i nTesAtual=1       # Diz se e a primeira ou segunda vez dos testes
+cScrAtual="$0"               # Nome do script atual para o log.
+cSaida="-tela"               # Define a saida padrao para a tela
+[ "$1" == "-arquivo" ] && cSaida="$1"   # Se especificado a saida sera arquivo
 
 for (( nTesAtual=1; nTesAtual<=2; nTesAtual++ ))
 do
    # Reseta o contador de erros da execucao dos testes
    nResTestes=0
 
-   # Inicio dos codigos dos testes
+   # Inicio dos codigos dos testes (ALTERE AQUI)
    echo "Codigo de Teste 1"   ; nResTestes="$nResTestes"+"$?"
    echo "Codigo de Teste 2"   ; nResTestes="$nResTestes"+"$?"
    echo "Codigo de Teste ..." ; nResTestes="$nResTestes"+"$?"
-   echo "Resultado de nResTeste: $nResTestes" # apagar
-   # Fim dos codigos dos testes
+   # Fim dos codigos dos testes (ALTERE ATE AQUI)
 
    # Se algum teste falhar E o teste é feito pela primeira vez
    if [ "$nResTestes" -gt 0 ] && [ "$nTesAtual" -eq 1 ] ; then
-      echo "LOG: Primeiro teste deu problema"
 
-      echo "$nResTestes maior que 0?" # apagar
-      echo "$nTesAtual igual a 1?" # apagar
+      logEvento "$cScrAtual: Foram encontradas falhas de segurança." -erro $cSaida
 
-      # Inicio dos codigos de correcoes
+      # Inicio dos codigos de correcoes (ALTERE AQUI)
       echo "Codigo de Correcao 1"   ; nResCorrecoes="$nResCorrecoes"+"$?"
       echo "Codigo de Correcao 2"   ; nResCorrecoes="$nResCorrecoes"+"$?"
       echo "Codigo de Correcao ..." ; nResCorrecoes="$nResCorrecoes"+"$?"
-      echo "Resultado de nResCorrecoes: $nResCorrecoes" # apagar
-      # Fim dos codigos de correcoes
+      # Fim dos codigos de correcoes (ALTERE ATE AQUI)
 
       # Se alguma correcao falhar
       if [ "$nResCorrecoes" -gt 0 ] ; then
-         echo "LOG: Alguma correcao falhou. Verifique!"
+         logEvento "$cScrAtual: Alguma correção falhou. Verifique!" -erro $cSaida
          break
       else
-         echo "LOG: As correcoes foram concluidas."
+         logEvento "$cScrAtual: As correções foram aplicadas." -concluido $cSaida
       fi
 
    # Se algum teste falhar E o teste é feito pela segunda vez
    elif [ "$nResTestes" -gt 0 ] && [ "$nTesAtual" -eq 2 ] ; then
-
-      echo "LOG: As correcoes nao corrigiram o problema. Verifique!"
+      logEvento "$cScrAtual: Falha nos testes depois das correções. Verifique!" -erro $cSaida
 
    # Se nenhum teste falhou
    else
-
-      echo "LOG: A maquina esta protegida!"
+      logEvento "$cScrAtual: Os testes não acusaram falhas de segurança." -concluido $cSaida
       break
 
    fi
