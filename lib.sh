@@ -1,3 +1,5 @@
+Eu tambem consigo alterar os arwuivos dos outros dos
+
 #!/bin/bash
 # Escrever textos no VI (Modo Inserção)
 # 1. Entre no Modo pressionando [Insert], [i] ou [I];
