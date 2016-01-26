@@ -43,7 +43,9 @@
 # Descri.: Formata a saida do log padrao
 # Sintaxe: logEvento <mensagem> <-concluido/-erro> <-tela/-arquivo>
 # Exemplo: logEvento "$0: Script executado." -concluido -tela
-# Logs   : 040115: Primeira versao do codigo.
+# Logs   : 040116: Primeira versao do codigo.
+#          260116: Adicionado a opcao -telaarq para imprimir o log
+#                  na tela e em arquivo.
 #
 
 logEvento()
@@ -53,7 +55,7 @@ logEvento()
    cArgumentos=""   # Armazena temporariamente os argumentos
    cMensagem=""     # Nome do script e mensagem do que ocorreu
    cStatus=""       # Mensagem do status do que ocorreu
-   aOpcoes=""       # -concluido/-erro, -tela/-arquivo
+   aOpcoes=""       # -concluido/-erro, -tela/-arquivo/-telaarq
    nIndex=0         # Usado para o array aOpcoes
 
    # Separa mensagem de opcoes
@@ -80,9 +82,11 @@ logEvento()
 
       # Se o log sera mostrado na tela
       if [ "$cArgumentos" == "-tela" ] ; then
-         echo
          echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]"
       elif [ "$cArgumentos" == "-arquivo" ] ; then
+         echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]" >> hardening.log
+      elif [ "$cArgumentos" == "-telaarq" ] ; then
+         echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]"
          echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]" >> hardening.log
       fi
 
