@@ -6,7 +6,9 @@
 #          outros script, etc.) de todos os codigos do projeto.
 #          Sera necessario alterar as linhas de testes e correcoes indicadas
 #          no codigo abaixo, de acordo com o entendimento do documento CIS.
-# Logs   : 040115: Primeira versao do codigo.
+# Logs   : 040116: Primeira versao do codigo.
+#          260116: Adicionado variaveis de identificacao de Level e Score.
+#
 #
 
 # Declaracao de bibliotecas e variaveis
@@ -16,7 +18,12 @@ declare -i nResCorrecoes=0   # Contador de erros das correcoes
 declare -i nTesAtual=1       # Diz se e a primeira ou segunda vez dos testes
 cScrAtual="$0"               # Nome do script atual para o log.
 cSaida="-tela"               # Define a saida padrao para a tela
-[ "$1" == "-arquivo" ] && cSaida="$1"   # Se especificado a saida sera arquivo
+[ "$1" != "" ] && cSaida="$1"   # Se especificado a saida sera arquivo
+
+# Inicio da declaracao das variaveis do Script (ALTERE AQUI)
+declare -i nLevel=9  # 1 ou 2
+declare -i nScore=9  # 0 (Not Scored), 1 (Scored)
+# Fim (ALTERE ATE AQUI)
 
 for (( nTesAtual=1; nTesAtual<=2; nTesAtual++ ))
 do
@@ -27,7 +34,7 @@ do
    echo "Codigo de Teste 1"   ; nResTestes="$nResTestes"+"$?"
    echo "Codigo de Teste 2"   ; nResTestes="$nResTestes"+"$?"
    echo "Codigo de Teste ..." ; nResTestes="$nResTestes"+"$?"
-   # Fim dos codigos dos testes (ALTERE ATE AQUI)
+   # Fim (ALTERE ATE AQUI)
 
    # Se algum teste falhar E o teste é feito pela primeira vez
    if [ "$nResTestes" -gt 0 ] && [ "$nTesAtual" -eq 1 ] ; then
@@ -43,6 +50,7 @@ do
       # Se alguma correcao falhar
       if [ "$nResCorrecoes" -gt 0 ] ; then
          logEvento "$cScrAtual: Alguma correção falhou. Verifique!" -erro $cSaida
+         # echo "Adicione mais informações aqui." >> hardening.log
          break
       else
          logEvento "$cScrAtual: As correções foram aplicadas." -concluido $cSaida
