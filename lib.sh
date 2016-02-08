@@ -43,7 +43,8 @@
 # Descri.: Formata a saida do log padrao
 # Sintaxe: logEvento <mensagem> <-concluido/-erro> <-tela/-arquivo>
 # Exemplo: logEvento "$0: Script executado." -concluido -tela
-# Logs   : 040116: Primeira versao do codigo.
+# Logs   : 080216: Alteracao do formato da saida da funcao logEvento().
+#          040116: Primeira versao do codigo.
 #          260116: Adicionado a opcao -telaarq para imprimir o log
 #                  na tela e em arquivo.
 #
@@ -51,7 +52,6 @@
 logEvento()
 {
    # Declaração de variáveis
-   dDataAtual=$(date +"%d%m%y")   # Data atual do log
    cArgumentos=""   # Armazena temporariamente os argumentos
    cMensagem=""     # Nome do script e mensagem do que ocorreu
    cStatus=""       # Mensagem do status do que ocorreu
@@ -75,19 +75,19 @@ logEvento()
    do
       # Se o log reportar que foi concluido
       if [ "$cArgumentos" == "-concluido" ] ; then
-         cStatus="Concluido"
+         cStatus="\e[1;32m ok \e[0m"
       elif [ "$cArgumentos" == "-erro" ] ; then
-         cStatus="  Erro!  "
+         cStatus="\e[1;31mERRO\e[0m"
       fi
 
       # Se o log sera mostrado na tela
       if [ "$cArgumentos" == "-tela" ] ; then
-         echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]"
+         echo -e "[""$cStatus""]"$cMensagem""
       elif [ "$cArgumentos" == "-arquivo" ] ; then
-         echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]" >> hardening.log
+         echo "[""$cStatus""]"$cMensagem"" >> hardening.log
       elif [ "$cArgumentos" == "-telaarq" ] ; then
-         echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]"
-         echo "[""$dDataAtual""][""$cMensagem""][""$cStatus""]" >> hardening.log
+         echo "[""$cStatus""]"$cMensagem""
+         echo "[""$cStatus""]"$cMensagem"" >> hardening.log
       fi
 
       ((nIndex++))
