@@ -84,10 +84,10 @@ logEvento()
       if [ "$cArgumentos" == "-tela" ] ; then
          echo -e "[""$cStatus""]"$cMensagem""
       elif [ "$cArgumentos" == "-arquivo" ] ; then
-         echo -e "[""$cStatus""]"$cMensagem"" >> hardening.log
+         echo "[""${cStatus:8:4}""]"$cMensagem"" >> hardening.log
       elif [ "$cArgumentos" == "-telaarq" ] ; then
          echo -e "[""$cStatus""]"$cMensagem""
-         echo -e "[""$cStatus""]"$cMensagem"" >> hardening.log
+         echo "[""${cStatus:8:4}""]"$cMensagem"" >> hardening.log
       fi
 
       ((nIndex++))
