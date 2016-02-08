@@ -43,10 +43,10 @@
 # Descri.: Formata a saida do log padrao
 # Sintaxe: logEvento <mensagem> <-concluido/-erro> <-tela/-arquivo>
 # Exemplo: logEvento "$0: Script executado." -concluido -tela
-# Logs   : 080216: Alteracao do formato da saida da funcao logEvento().
-#          040116: Primeira versao do codigo.
-#          260116: Adicionado a opcao -telaarq para imprimir o log
-#                  na tela e em arquivo.
+# Logs  : --------------------------------------------------------------------
+# 080216: Alteracao do formato da saida da funcao logEvento().
+# 040116: Primeira versao do codigo.
+# 260116: Adicionado a opcao -telaarq para imprimir o log na tela e em arquivo.
 #
 
 logEvento()
